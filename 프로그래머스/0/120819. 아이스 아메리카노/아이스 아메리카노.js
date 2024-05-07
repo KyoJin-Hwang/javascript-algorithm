@@ -5,3 +5,7 @@ function solution(money) {
     const answer = [glass, change];
     return answer;
 }
+
+// function solution(money) {
+//     return [Math.floor(money / 5500), money % 5500];
+// }
