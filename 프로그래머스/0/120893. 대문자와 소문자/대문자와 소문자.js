@@ -1,11 +1,11 @@
 function solution(my_string) {
 let arr = "" 
 
-for (let i = 0; i < my_string.length; i++) { 
-	if (my_string[i] === my_string[i].toUpperCase()) {
-		arr += my_string[i].toLowerCase() 
+for (let i of my_string) { 
+	if (i === i.toUpperCase()) {
+		arr += i.toLowerCase() 
 	} else { 
-		arr += my_string[i].toUpperCase() 
+		arr += i.toUpperCase() 
 	}
 }
     return arr
