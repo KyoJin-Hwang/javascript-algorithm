@@ -1,13 +1,4 @@
-// 신박한코드 
-// function solution(num_list) {
-//     const answer = [0,0]
-//     for(let a of num_list){
-//         answer[a%2] += 1
-//     }
-//     return answer;
-// }
 function solution(num_list) {
-    
     let even = 0
     let odd = 0
     num_list.map((el)=>{
@@ -17,6 +8,13 @@ function solution(num_list) {
             odd += 1
         }
     })    
-    
     return [even, odd];
 }
+// 신박한코드 
+// function solution(num_list) {
+//     const answer = [0,0]
+//     for(let a of num_list){
+//         answer[a%2]++
+//     }
+//     return answer;
+// }
