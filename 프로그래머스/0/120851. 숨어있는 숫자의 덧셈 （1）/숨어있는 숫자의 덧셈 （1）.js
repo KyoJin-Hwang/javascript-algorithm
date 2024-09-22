@@ -9,10 +9,7 @@ function solution(my_string) {
 //     return [...my_string].reduce((acc,cur)=>Number(cur) ? +acc + +cur : acc, 0)
 // }
 
-// 정규식 방법 
-// function solution(my_string) {
-//     const answer = my_string.replace(/[^0-9]/g, '')
-//                             .split('')
-//                             .reduce((acc, curr) => acc + Number(curr), 0);
-//     return answer;
-// }
+// 설명 
+// 1. my_string 을 split 으로 각 배열로 쪼갠다. 
+// 2. map 함수를 이용하여 순회한다. 
+// 3. 순회 도중 isNaN을 활용하여 숫자인지 글자인지 판별 후 answer에 누적하여 return 해준다. 
