@@ -1,16 +1,12 @@
 function solution(rsp) {
-    let answer = ""
-    const rspArr = rsp.split('');
-    for(let v of rspArr){
-        if(v === '0'){
-            answer += '5'
-        }
-        else if(v === '2'){
-            answer += '0'
-        }
-        else{
-            answer += '2'
-        }
-    }
-    return answer;
+    const rspMap = { '2': '0', '0': '5', '5': '2' };
+    return [...rsp].map(i => rspMap[i]).join('');
 }
+
+// 설명 
+// 1. rspMap 이라는 변수로 객체를 선언해준다
+// 가위(2) 일때는 바위(0)
+// 바위(0) 일때는 보(5)
+// 보(5) 일때는 (2)
+// 2. 스프레드 문법으로 rsp배열로 쪼개서 rspMap 키를 조회하여 값을 불러와서 rsp 값을 변경해준다. 
+// 3. join 문으로 배열을 풀고 "" 으로 띄어쓰기없이 붙여준다. 
