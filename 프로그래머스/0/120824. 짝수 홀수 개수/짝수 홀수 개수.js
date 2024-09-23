@@ -1,15 +1,22 @@
 function solution(num_list) {
-    let even = 0
-    let odd = 0
+    // 변수 생성
+    const answer = [0,0]
+    
+    // Map 함수를 사용하여 배열 순회
     num_list.map((el)=>{
         if(el%2 === 0){
-            even += 1
+        // el%2 === 0 짝수일경우 answer[0]에 증감연산자
+            answer[0]++
         }else{
-            odd += 1
+        // 홀수일경우 answer[1]에 증감연산자
+            answer[1]++
         }
-    })    
-    return [even, odd];
+    })
+    return answer;
 }
+
+
+
 // 신박한코드 
 // function solution(num_list) {
 //     const answer = [0,0]
