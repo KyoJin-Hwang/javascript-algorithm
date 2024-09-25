@@ -5,10 +5,10 @@ const obj = {
 };
 
 function solution(a, b) {
-    return a % 2 === 0 && b % 2 === 0
-        ? obj.allEven(a, b)    
-        : a % 2 !== 0 && b % 2 !== 0
-        ? obj.allOdd(a, b)     
-        : obj.oneOdd(a, b);   
+    const isOdd = (num) => num % 2 === 1;
+    return isOdd(a) && isOdd(b) ? 
+        obj.allOdd(a,b) : 
+        isOdd(a) || isOdd(b) ? 
+        obj.oneOdd(a,b) : obj.allEven(a,b)
 }
 
