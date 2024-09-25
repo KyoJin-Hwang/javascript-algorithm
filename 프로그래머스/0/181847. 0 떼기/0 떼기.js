@@ -1,4 +1,4 @@
 function solution(n_str) {
     
-    return parseInt(n_str).toString()
+    return String(+n_str)
 }
