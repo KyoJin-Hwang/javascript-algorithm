@@ -1,4 +1,5 @@
-function solution(arr, n) {
-    
-    return arr.length % 2 === 0 ? arr.map((el,i) => i%2===0 ? el: el+n):arr.map((el,i) => i%2!==0 ? el: el+n);
-}
+const solution = (arr, n) => arr.map((num, idx) => (
+    arr.length % 2 !== idx % 2
+    ? num + n
+    : num
+))
