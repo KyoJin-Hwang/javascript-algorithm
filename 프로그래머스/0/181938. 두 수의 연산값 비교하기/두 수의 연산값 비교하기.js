@@ -1,7 +1,5 @@
 function solution(a, b) {
-    let answer = 0;
-    const ab = ~~[a,b].join("")
-    const abDouble = 2 * a * b
-    answer = ab >= abDouble ? ab : abDouble 
-    return answer;
+    let num1 = parseInt(a+""+b+"");
+    let num2 = 2*a*b;
+    return num1 > num2 ? num1 : num2;
 }
