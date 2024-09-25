@@ -4,4 +4,4 @@ function solution(my_string, n) {
 }
 
 // 설명 
-// -n 부터 불러오는걸로 
+// slice 함수를 활용하여 -n 부터 값을 불러온다. 
