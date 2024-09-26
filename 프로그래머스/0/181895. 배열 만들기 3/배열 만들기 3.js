@@ -7,3 +7,11 @@ function solution(arr, intervals) {
     }
     return answer;
 }
+
+// 구조분해할당으로 풀이한 간단 풀이식
+
+// function solution(arr, intervals) {
+//     const [[a,b],[c,d]] = intervals;
+
+//     return [...arr.slice(a, b+1), ...arr.slice(c, d+1)];
+// }
