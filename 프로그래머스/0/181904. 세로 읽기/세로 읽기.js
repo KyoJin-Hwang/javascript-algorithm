@@ -5,3 +5,7 @@ function solution(my_string, m, c) {
     }
     return answer.join("")
 }
+
+// filter 짧은 풀이
+
+// [...my_string].filter((_, i) => i % m === c - 1).join('');
