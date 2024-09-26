@@ -1,8 +1,3 @@
 function solution(num_list) {
-  const list = num_list;
-  if(list.length >=11){
-      return list.reduce((a,b) => a+b ,0)
-  } else {
-      return list.reduce((a,b)=> a*b , 1)
-  }
+  return num_list.reduce((a,b)=> num_list.length >= 11 ? a+b : a*b)
 }
