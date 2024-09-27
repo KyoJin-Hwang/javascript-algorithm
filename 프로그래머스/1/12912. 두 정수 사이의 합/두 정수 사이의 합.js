@@ -1,17 +1,4 @@
-function solution(a, b) {
-    let answer = 0;
-    if(a < b){
-        for(let i= a; i <= b; i++){
-            answer += i
-        }
-    }else if(a > b){
-        console.log('b')
-        for(let j= b; j <= a; j++){
-            answer += j
-        }
-    }else{
-        console.log('c')
-        answer = a
-    }
-    return answer;
+function solution(a, b, s = 0) {
+    for (var i = Math.min(a, b); i <= Math.max(a, b); i++) s += i;
+    return s;
 }
