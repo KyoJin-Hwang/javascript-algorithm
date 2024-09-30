@@ -1,9 +1,3 @@
 function solution(arr, answer = []) {
-    arr.map((el, idx) => {
-        
-        if (idx === 0 || el !== arr[idx - 1]) {
-            answer.push(el);
-        }
-    });
-    return answer;
+    return arr.filter((val,index) => val != arr[index+1]);
 }
