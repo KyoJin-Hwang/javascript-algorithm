@@ -1,4 +1,4 @@
 function solution(s) {
-    const wordArr = s.split(' ');  
-    return `${Math.min(...wordArr)} ${Math.max(...wordArr)}`;
+    const word = s.split(' ');  
+    return `${Math.min(...word)} ${Math.max(...word)}`;
 }
