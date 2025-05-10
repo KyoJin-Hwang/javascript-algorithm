@@ -1,13 +1,18 @@
 function solution(price) {
-    if(price >= 500000) {
-        price *= 0.8;
-    } else if(price >= 300000) {
-        price *= 0.9;
-    } else if(price >= 100000) {
-        price *= 0.95;
-    }
-    return Math.floor(price);
+    let answer = 0
+    const a = 100000
+    const b = 300000
+    const c = 500000
+    
+    if(price >= c) {
+      answer += price * 0.2  
+    } 
+    else if(price >= b) {
+      answer += price * 0.1  
+    } 
+    else if(price >= a) {
+      answer += price * 0.05  
+    } 
+    console.log(price , answer, price - answer)
+    return ~~(price - answer)
 }
-
-// 설명
-// if문으로 각 조건문에 해당하는 곳에 할인율 만큼 price 곱하여 값을 변경해준다. 
