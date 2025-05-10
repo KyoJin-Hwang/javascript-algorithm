@@ -1,4 +1,5 @@
 function solution(sides) {
-    var answer = 0;
-    return answer;
+  sides.sort((a, b) => a - b); 
+  const [a, b, c] = sides;     
+  return a + b > c ? 1 : 2;    
 }
