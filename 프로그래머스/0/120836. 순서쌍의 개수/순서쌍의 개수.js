@@ -1,9 +1,11 @@
 function solution(n) {
-    let answer = 0;
-    for(let i = 1; i<=n; i++){
-        if(n % i === 0){
-            answer += 1
-        }
+  let count = 0;
+
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      count += i * i === n ? 1 : 2;
     }
-    return answer;
+  }
+
+  return count;
 }
