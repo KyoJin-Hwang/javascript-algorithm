@@ -7,4 +7,4 @@ for(let i of arr){
     if(i % 2 === 0) answer.push(i)
 }
 
-console.log(answer.join(' '))
+console.log(answer.reverse().join(' '))
