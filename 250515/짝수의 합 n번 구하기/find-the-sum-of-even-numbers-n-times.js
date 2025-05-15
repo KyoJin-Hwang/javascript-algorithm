@@ -6,7 +6,8 @@ const n = input[0]
 for(let i = 1; i<=n; i++){
     let answer = 0
     const [a, b] = input[i].split(' ').map(Number)
-    for(let j = a+1; j <= b; j+=2){
+    for(let j = a; j <= b; j++){
+        if(j % 2 !== 0) continue
         answer += j
     }
     console.log(answer)
