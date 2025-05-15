@@ -6,7 +6,10 @@ let idx = 0
 while(input[idx]){
     if(input[idx] < 25) console.log('Higher')
     else if(input[idx] > 25) console.log('Lower')
-    else console.log('Good')
+    else {
+        console.log('Good')
+        break;
+    }
     idx++
 }
 
