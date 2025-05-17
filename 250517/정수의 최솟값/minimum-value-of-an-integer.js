@@ -1,10 +1,10 @@
 const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim().split('\n');
 
-let [a, b, c] = input[0].split(" ").map(Number);
+let arr = input[0].split(" ").map(Number);
 
-function answer(q, w, e){
-   return q >= w ? w : q >= e ? e : q
+function answer(n){
+    return console.log(Math.min(...n))
 }
 
-console.log(answer(a,b,c))
+answer(arr)
