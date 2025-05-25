@@ -1,4 +1,4 @@
 function solution(n) {
-    
-    return String(n).split('').sort((a,b)=>b-a).join('')*1
+    let answer = n.toString().split('').sort((a,b) => b-a).join('')
+    return +answer;
 }
