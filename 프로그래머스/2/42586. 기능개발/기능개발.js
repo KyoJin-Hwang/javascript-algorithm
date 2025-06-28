@@ -1,16 +1,26 @@
 function solution(progresses, speeds) {
-      let answer = [0];
-    let days = progresses.map((progress, index) => Math.ceil((100 - progress) / speeds[index]));
-    let maxDay = days[0];
+  const daysToComplete = progresses.map((progress, i) =>
+    Math.ceil((100 - progress) / speeds[i])
+  );
 
-    for(let i = 0, j = 0; i< days.length; i++){
-        if(days[i] <= maxDay) {
-            answer[j] += 1;
-        } else {
-            maxDay = days[i];
-            answer[++j] = 1;
-        }
+  const result = [];
+  let prev = daysToComplete[0];
+  let count = 1;
+
+  for (let i = 1; i < daysToComplete.length; i++) {
+    const current = daysToComplete[i];
+
+    if (current <= prev) {
+      // 이전 기능 배포일보다 빨리 끝났으므로 함께 배포 가능
+      count++;
+    } else {
+      // 새 배포 시작
+      result.push(count);
+      prev = current;
+      count = 1;
     }
+  }
 
-    return answer;
+  result.push(count); // 마지막 묶음 배포
+  return result;
 }
