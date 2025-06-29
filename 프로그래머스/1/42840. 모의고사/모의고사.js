@@ -1,23 +1,22 @@
 function solution(answers) {
-    const patterns = [
-        [1,2,3,4,5],[2,1,2,3,2,4,2,5],[3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    ]
-    let scores = [0,0,0];
-    for(const [i, answer] of answers.entries()){
-        for(const [j, pattern] of patterns.entries()){
-            if(answer === pattern[i % pattern.length]){
-                scores[j] += 1
-            }
-        }
-    }
-    const max = Math.max(...scores)
-    
-    const high = []
-    
-    for(let i = 0; i < scores.length; i++){
-        if(scores[i] === max){
-            high.push(i+1)
-        }
-    }
-    return high
+  const p1 = [1, 2, 3, 4, 5];
+  const p2 = [2, 1, 2, 3, 2, 4, 2, 5];
+  const p3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+
+  const score = [0, 0, 0];
+
+  answers.forEach((answer, i) => {
+    if (answer === p1[i % p1.length]) score[0]++;
+    if (answer === p2[i % p2.length]) score[1]++;
+    if (answer === p3[i % p3.length]) score[2]++;
+  });
+
+  const maxScore = Math.max(...score);
+  const result = [];
+
+  score.forEach((s, i) => {
+    if (s === maxScore) result.push(i + 1);
+  });
+
+  return result;
 }
