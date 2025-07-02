@@ -1,12 +1,15 @@
 function solution(sizes) {
-    const width = [];
-    const height = [];
-
-    for(let i = 0; i < sizes.length; i++) {
-        const max = Math.max(sizes[i][0], sizes[i][1]);
-        const min = Math.min(sizes[i][0], sizes[i][1]);
-        width.push(max);
-        height.push(min);
+    let answer = 0;
+    const sort = sizes.map((el)=> {
+        return el.sort((a,b)=> b-a)
+    })
+    let w = 0
+    let h = 0
+    for(let i = 0; i < sort.length; i++){
+        let [first, second] = sort[i]
+        if(w < first) w = first
+        if(h < second) h = second
     }
-    return Math.max(...width) * Math.max(...height);
+    answer = w * h
+    return answer;
 }
