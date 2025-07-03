@@ -1,6 +1,4 @@
 function solution(seoul) {
-    const answer = (num) => {
-        return `김서방은 ${num}에 있다`
-    }
-    return answer(seoul.indexOf('Kim'));
+    const location = seoul.findIndex((el)=> el === 'Kim')
+    return `김서방은 ${location}에 있다`;
 }
