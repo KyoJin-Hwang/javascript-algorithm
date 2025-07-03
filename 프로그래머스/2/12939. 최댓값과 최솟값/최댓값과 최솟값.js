@@ -1,4 +1,8 @@
 function solution(s) {
-    const word = s.split(' ');  
-    return `${Math.min(...word)} ${Math.max(...word)}`;
+    let answer = '';
+    const a = s.split(' ').map(Number)
+    const min = Math.min(...a)
+    const max = Math.max(...a)
+    answer = `${min} ${max}`
+    return answer;
 }
