@@ -1,12 +1,6 @@
 function solution(arr) {
-    if (arr.length === 1) {
-        return [-1];
-    }
+  if (arr.length === 1) return [-1]; // 배열에 하나밖에 없으면 -1 리턴
 
-  const min = Math.min(...arr);
-  const idx = arr.indexOf(min);
-    
-  arr.splice(idx, 1);
-    
-  return arr
+  const min = Math.min(...arr); // 가장 작은 값 찾기
+  return arr.filter((num) => num !== min); // 가장 작은 값 제거
 }
