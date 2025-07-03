@@ -1,4 +1,5 @@
-function solution(absolutes, signs, answer = 0) {
-   return absolutes.reduce((acc, cur, i) => acc + (cur * (signs[i] ? 1 : -1)), 0);
-    
+function solution(absolutes, signs) {
+    return absolutes
+        .map((el,idx)=> !signs[idx] ? el * -1 : el)
+        .reduce((acc,cur)=> acc+cur, 0)
 }
