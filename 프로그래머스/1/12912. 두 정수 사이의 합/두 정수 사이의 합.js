@@ -1,4 +1,5 @@
-function solution(a, b, s = 0) {
-    for (var i = Math.min(a, b); i <= Math.max(a, b); i++) s += i;
-    return s;
+function solution(a, b) {
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+  return ((max - min + 1) * (min + max)) / 2;
 }
