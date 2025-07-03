@@ -1,6 +1,7 @@
-function solution(arr, divisor, answer = []) {
-     
-    answer = arr.filter((el) => el % divisor === 0).sort((a,b)=> a-b)
-       
-    return !answer.length ? [-1] : answer;
+function solution(arr, divisor) {
+  const result = arr.filter(num => num % divisor === 0);
+  
+  if (result.length === 0) return [-1];
+  
+  return result.sort((a, b) => a - b);
 }
