@@ -1,15 +1,16 @@
 function solution(numbers, target) {
-    let answer = 0;
-    getAnswer(0,0);
-    function getAnswer(x,value) {
-        if(x<numbers.length){
-            getAnswer(x+1,value + numbers[x]);
-            getAnswer(x+1,value - numbers[x]);
-        } else{
-            if(value === target){
-                answer++
-            }
-        }
+  let count = 0;
+
+  function dfs(index, sum) {
+    if (index === numbers.length) {
+      if (sum === target) count++;
+      return;
     }
-    return answer;
+
+    dfs(index + 1, sum + numbers[index]); // + 선택
+    dfs(index + 1, sum - numbers[index]); // - 선택
+  }
+
+  dfs(0, 0);
+  return count;
 }
