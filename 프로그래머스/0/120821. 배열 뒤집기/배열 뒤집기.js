@@ -1,7 +1,3 @@
 function solution(num_list) {
-    let answer = [];
-    answer = num_list.reverse()
-    return answer;
+    return num_list.reverse();
 }
-// 설명 
-// reverse: 배열의 순서를 뒤집어 준다. 
