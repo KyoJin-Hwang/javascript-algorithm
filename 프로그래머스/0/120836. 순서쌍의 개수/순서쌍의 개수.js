@@ -1,9 +1,11 @@
 function solution(n) {
   let count = 0;
+  const sqrt = Math.floor(Math.sqrt(n));
 
-  for (let i = 1; i * i <= n; i++) {
+  for (let i = 1; i <= sqrt; i++) {
     if (n % i === 0) {
-      count += i * i === n ? 1 : 2;
+      if (i * i === n) count += 1;   // 제곱수
+      else count += 2;               // 비제곱수
     }
   }
 
