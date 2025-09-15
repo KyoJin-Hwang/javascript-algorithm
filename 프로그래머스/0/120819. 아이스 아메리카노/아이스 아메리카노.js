@@ -1,6 +1,9 @@
 function solution(money) {
-  const coffee = 5500;
-  const count = Math.floor(money / coffee);
-  const change = money % coffee;
-  return [count, change];
+    let answer = [];
+    let ice = 5500 
+    let a = Math.floor(money/ice)
+    let b = money - (ice * a)
+    answer.push(a)
+    answer.push(b)
+    return answer;
 }
