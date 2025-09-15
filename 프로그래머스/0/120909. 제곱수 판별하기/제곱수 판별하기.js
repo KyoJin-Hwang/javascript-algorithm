@@ -1,5 +1,5 @@
 function solution(n) {
     let sqrt = Math.sqrt(n)
-    let answer = n % sqrt === 0 ? 1 : 2    
-    return answer;
+    
+    return Number.isInteger(sqrt) ? 1 : 2;
 }
