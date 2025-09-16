@@ -1,5 +1,4 @@
 function solution(my_string) {
-    const reg = /[aeiou]/g
-    
-    return my_string.replaceAll(reg, "");
+    let answer = my_string.replaceAll(/[aeiou]/gi, '');
+    return answer;
 }
