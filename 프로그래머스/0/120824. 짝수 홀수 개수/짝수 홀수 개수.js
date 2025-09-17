@@ -1,9 +1,16 @@
 function solution(num_list) {
-    const answer = new Array(2).fill(0)
-    console.log(answer)
-    for(const num of num_list){
-        if(num % 2 === 0) answer[0] += 1
-        else answer[1] += 1
+    let answer = []
+    let even = 0
+    let odd = 0 
+    
+
+    for(let num of num_list){
+        if(num % 2 === 0) even++
+        else odd++
     }
+    
+    answer[0] = even
+    answer[1] = odd
+    
     return answer;
 }
