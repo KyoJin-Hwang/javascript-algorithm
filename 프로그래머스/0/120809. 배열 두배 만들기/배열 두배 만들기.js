@@ -1,4 +1,4 @@
 function solution(numbers) {
-    
-    return numbers.map(v=>v*2);
+    let answer = numbers.map(el => el * 2)
+    return answer;
 }
