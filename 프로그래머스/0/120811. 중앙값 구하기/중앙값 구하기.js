@@ -1,7 +1,7 @@
 function solution(array) {
-    array.sort((a, b) => a - b);
+    let sort = array.sort((a,b)=> a-b);
+    let answer = 0 
     
-    const mid = Math.floor(array.length / 2);
-    
-    return array[mid];
+    answer = sort[Math.floor(sort.length / 2)]
+    return answer;
 }
