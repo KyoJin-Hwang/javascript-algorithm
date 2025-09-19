@@ -1,18 +1,11 @@
 function solution(price) {
-    let answer = 0
-    const a = 100000
-    const b = 300000
-    const c = 500000
-    
-    if(price >= c) {
-      answer += price * 0.2  
-    } 
-    else if(price >= b) {
-      answer += price * 0.1  
-    } 
-    else if(price >= a) {
-      answer += price * 0.05  
-    } 
-    console.log(price , answer, price - answer)
-    return ~~(price - answer)
+    if (price >= 100000 && price < 300000) {
+        return Math.floor(price * .95)
+    } else if (price >= 300000 && price < 500000) {
+        return Math.floor(price * .9)
+    } else if (price >= 500000) {
+        return Math.floor(price * .8)
+    } else {
+        return price
+    }
 }
