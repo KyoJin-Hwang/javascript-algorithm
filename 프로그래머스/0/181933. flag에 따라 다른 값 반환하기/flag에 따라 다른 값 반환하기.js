@@ -1,3 +1,4 @@
 function solution(a, b, flag) {
-    return flag? a+b : a-b;
+    let answer = 0;
+    return flag ? a+b : a-b;
 }
