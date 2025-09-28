@@ -1,7 +1,5 @@
 function solution(arr) {
+    let answer = arr.join('')
     
-    return arr.join("");
+    return answer;
 }
-
-// 설명
-// join method 는 배열안에 string 값들을 합쳐준다. 
