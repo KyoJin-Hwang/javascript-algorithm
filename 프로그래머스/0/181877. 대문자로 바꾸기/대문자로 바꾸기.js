@@ -1,4 +1,4 @@
 function solution(myString) {
-
-    return myString.toUpperCase();
+    let answer = myString.toUpperCase();
+    return answer;
 }
