@@ -1,5 +1,9 @@
 function solution(my_string) {
-    const reg = /[0-9]/g;
-    return my_string.match(reg).reduce((acc, cur)=> acc + ~~cur, 0)
-    
+  const num = my_string.split("");
+  let result = 0;
+  
+  for(let i = 0; i < num.length; i++){
+    if(Number(num[i])) result += Number(num[i])
+  }
+  return result
 }
