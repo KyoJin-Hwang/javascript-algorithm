@@ -1,4 +1,3 @@
-function solution(n, answer = 0){
-    
-    return +(n+"").split('').reduce((a, c)=> a+ +c, 0)
+function solution(n) {
+  return n.toString().split('').reduce((sum, digit) => sum + Number(digit), 0);
 }
