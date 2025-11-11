@@ -1,4 +1,4 @@
 function solution(s) {
-    
-    return Number(s);
+    var answer = parseInt(s);
+    return answer;
 }
